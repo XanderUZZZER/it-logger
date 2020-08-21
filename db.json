@@ -3,23 +3,23 @@
     {
       "id": 1,
       "message": "Changed hard drive on workstation 005",
-      "attention": false,
-      "date": "2019-01-21T14:02:25.544Z",
-      "tech": "Sam Smith"
+      "attention": true,
+      "tech": "Sara Wilson",
+      "date": "2020-08-21T22:07:22.636Z"
     },
     {
       "id": 2,
-      "message": "Workstation 007 not posting",
+      "message": "Workstation 007  is fixed by smith",
       "attention": true,
-      "date": "2019-12-21T14:02:25.544Z",
-      "tech": "John Doe"
+      "tech": "Sam Smith",
+      "date": "2020-08-21T22:07:11.475Z"
     },
     {
       "id": 3,
       "message": "Changed memory on workstation 005",
       "attention": false,
-      "date": "2020-02-20T14:02:25.544Z",
-      "tech": "Sara Wilson"
+      "tech": "Sara Wilson",
+      "date": "2020-08-21T22:07:18.403Z"
     }
   ],
   "techs": [
