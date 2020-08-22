@@ -4,22 +4,22 @@
       "id": 1,
       "message": "Changed hard drive on workstation 005",
       "attention": true,
-      "tech": "Sara Wilson",
-      "date": "2020-08-21T22:07:22.636Z"
+      "tech": "l ll",
+      "date": "2020-08-22T21:11:36.172Z"
     },
     {
       "id": 2,
       "message": "Workstation 007  is fixed by smith",
       "attention": true,
-      "tech": "Sam Smith",
-      "date": "2020-08-21T22:07:11.475Z"
+      "tech": "John Doe",
+      "date": "2020-08-22T19:32:13.854Z"
     },
     {
       "id": 3,
       "message": "Changed memory on workstation 005",
       "attention": false,
-      "tech": "Sara Wilson",
-      "date": "2020-08-21T22:07:18.403Z"
+      "tech": "John Doe",
+      "date": "2020-08-22T16:12:11.620Z"
     }
   ],
   "techs": [

@@ -6,7 +6,7 @@ import {
   CLEAR_CURRENT,
   UPDATE_LOG,
   CLEAR_LOGS,
-  SET_LOADING,
+  SET_LOGS_LOADING,
   LOGS_ERROR,
   SEARCH_LOGS
 } from '../actions/types';
@@ -47,7 +47,8 @@ export default (state = initialState, action) => {
     case SEARCH_LOGS:
       return {
         ...state,
-        logs: action.payload
+        logs: action.payload,
+        loading: false
       };
     case SET_CURRENT:
       return {
@@ -59,7 +60,7 @@ export default (state = initialState, action) => {
         ...state,
         current: null
       };
-    case SET_LOADING:
+    case SET_LOGS_LOADING:
       return {
         ...state,
         loading: true

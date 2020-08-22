@@ -6,7 +6,7 @@ import {
   CLEAR_CURRENT,
   UPDATE_LOG,
   CLEAR_LOGS,
-  SET_LOADING,
+  SET_LOGS_LOADING,
   LOGS_ERROR,
   SEARCH_LOGS
 } from "./types";
@@ -52,7 +52,7 @@ export const addLog = (log) => async dispatch => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error.response.data
+      payload: error.response.statusText
     });
   }
 };
@@ -71,7 +71,7 @@ export const deleteLog = (id) => async dispatch => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error.response.data
+      payload: error.response.statusText
     });
   }
 };
@@ -97,7 +97,7 @@ export const updateLog = log => async dispatch => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error.response.data
+      payload: error.response.statusText
     });
   }
 };
@@ -117,7 +117,7 @@ export const searchLogs = (text) => async dispatch => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error.response.data
+      payload: error.response.statusText
     });
   }
 };
@@ -139,6 +139,6 @@ export const clearCurrentLog = () => {
 
 export const setLoading = () => {
   return {
-    type: SET_LOADING
+    type: SET_LOGS_LOADING
   }
 };
