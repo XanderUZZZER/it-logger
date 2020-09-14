@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { getTechs } from '../../actions/techActions';
 import TechItem from './TechItem';
-import Preloader from '../layout/Preloader';
+//import Preloader from '../layout/Preloader';
 
 const TechListModal = ({ getTechs, tech: { techs, loading } }) => {
   useEffect(() => {

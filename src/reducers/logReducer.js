@@ -60,6 +60,11 @@ export default (state = initialState, action) => {
         ...state,
         current: null
       };
+    case CLEAR_LOGS:
+      return {
+        logs: null,
+        loading: false
+      };
     case SET_LOGS_LOADING:
       return {
         ...state,
