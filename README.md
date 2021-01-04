@@ -16,7 +16,7 @@ React app to track IT department tasks and issues. Uses JSON-Server as a mock ba
 
 - React
 - React Hooks
-- Redux
+- Redux with HOCs
 - Materialize-CSS
 - JSON-server
   <br>
