@@ -12,7 +12,7 @@ const initialState = {
   error: null
 };
 
-export default (state = initialState, action) => {
+const techReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_TECHS:
       return {
@@ -29,7 +29,7 @@ export default (state = initialState, action) => {
     case DELETE_TECH:
       return {
         ...state,
-        techs: state.techs.filter(tech => tech.id !== action.payload.id),
+        techs: state.techs.filter(tech => tech.id !== action.payload),
         loading: false
       };
     case TECHS_ERROR:
@@ -47,3 +47,5 @@ export default (state = initialState, action) => {
       return state;
   }
 }
+
+export default techReducer

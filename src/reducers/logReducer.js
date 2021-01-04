@@ -18,7 +18,7 @@ const initialState = {
   error: null
 };
 
-export default (state = initialState, action) => {
+const logReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_LOGS:
       return {
@@ -35,7 +35,7 @@ export default (state = initialState, action) => {
     case DELETE_LOG:
       return {
         ...state,
-        logs: state.logs.filter(log => log.id !== action.payload.id),
+        logs: state.logs.filter(log => log.id !== action.payload),
         loading: false
       };
     case UPDATE_LOG:
@@ -80,3 +80,5 @@ export default (state = initialState, action) => {
       return state;
   }
 }
+
+export default logReducer

@@ -41,6 +41,7 @@ const EditLogModal = ({ current, updateLog }) => {
 
   return (
     <div id="edit-log-modal" className="modal" style={modalStyle}>
+
       <div className="modal-content">
         <h4>Edit system log</h4>
         <div className="row">
@@ -51,11 +52,9 @@ const EditLogModal = ({ current, updateLog }) => {
               value={message}
               onChange={event => setMessage(event.target.value)}
             />
-            {/* <label htmlFor="message" className="active">
-              Log Message
-            </label> */}
           </div>
         </div>
+
         <div className="row">
           <div className="input-field">
             <select
@@ -69,6 +68,7 @@ const EditLogModal = ({ current, updateLog }) => {
             </select>
           </div>
         </div>
+
         <div className="row">
           <div className="input-field">
             <p>
@@ -86,6 +86,7 @@ const EditLogModal = ({ current, updateLog }) => {
           </div>
         </div>
       </div>
+
       <div className="modal-footer">
         <a href="#!"
           onClick={onSubmit}
@@ -100,7 +101,7 @@ const EditLogModal = ({ current, updateLog }) => {
 
 const modalStyle = {
   width: '75%',
-  height: '75%'
+  maxHeight: '75%'
 };
 
 
