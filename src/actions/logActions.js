@@ -10,12 +10,14 @@ import {
   SEARCH_LOGS
 } from "./types";
 
+let baseUrl = process.env.REACT_APP_BASE_URL
+
 // Get logs from server
 export const getLogs = () => async dispatch => {
   try {
     dispatch(setLoading());
 
-    const res = await fetch('/logs');
+    const res = await fetch(`${baseUrl}logs`);
     const data = await res.json();
 
     dispatch({
@@ -35,7 +37,7 @@ export const addLog = (log) => async dispatch => {
   try {
     dispatch(setLoading());
 
-    const res = await fetch('/logs', {
+    const res = await fetch(`${baseUrl}logs`, {
       method: 'POST',
       body: JSON.stringify(log),
       headers: {
@@ -61,7 +63,7 @@ export const deleteLog = (id) => async dispatch => {
   try {
     dispatch(setLoading());
 
-    await fetch(`/logs/${id}`, { method: 'DELETE' });
+    await fetch(`${baseUrl}logs/${id}`, { method: 'DELETE' });
 
     dispatch({
       type: DELETE_LOG,
@@ -80,7 +82,7 @@ export const updateLog = log => async dispatch => {
   try {
     dispatch(setLoading());
 
-    const res = await fetch(`/logs/${log.id}`, {
+    const res = await fetch(`${baseUrl}logs/${log.id}`, {
       method: 'PUT',
       body: JSON.stringify(log),
       headers: {
@@ -106,7 +108,7 @@ export const searchLogs = (text) => async dispatch => {
   try {
     dispatch(setLoading());
 
-    const res = await fetch(`/logs?q=${text}`);
+    const res = await fetch(`${baseUrl}logs?q=${text}`);
     const data = await res.json();
 
     dispatch({

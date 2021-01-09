@@ -6,12 +6,14 @@ import {
   SET_TECHS_LOADING
 } from "./types";
 
+let baseUrl = process.env.REACT_APP_BASE_URL
+
 // Get logs from server
 export const getTechs = () => async dispatch => {
   try {
     dispatch(setLoading());
 
-    const res = await fetch('/techs');
+    const res = await fetch(`${baseUrl}techs`);
     const data = await res.json();
 
     dispatch({
@@ -31,7 +33,7 @@ export const addTech = (tech) => async dispatch => {
   try {
     dispatch(setLoading());
 
-    const res = await fetch('/techs', {
+    const res = await fetch(`${baseUrl}techs`, {
       method: 'POST',
       body: JSON.stringify(tech),
       headers: {
@@ -57,7 +59,7 @@ export const deleteTech = (id) => async dispatch => {
   try {
     dispatch(setLoading());
 
-    await fetch(`/techs/${id}`, { method: 'DELETE' });
+    await fetch(`${baseUrl}techs/${id}`, { method: 'DELETE' });
 
     dispatch({
       type: DELETE_TECH,
