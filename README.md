@@ -12,6 +12,13 @@ React app to track IT department tasks and issues. Uses JSON-Server as a mock ba
 
 </p>
 
+## Live demo
+
+Live demo of the app is hosted on Netlify.  
+Visit [https://xander-itlogger.netlify.app/](https://xander-itlogger.netlify.app/)
+
+_\*The demo application uses a static JSON file, so after reloading the application, any changes in the database are not saved_
+
 ## Technology stack
 
 - React
