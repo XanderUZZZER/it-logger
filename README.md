@@ -2,7 +2,7 @@
 
 ## Description
 
-React app to track IT department tasks and issues. Uses JSON-Server as a mock backend.
+React app to track IT department tasks and issues. Uses JSON-Server as a mock backend. User can add, modify and delete some IT tasks, assign technicians to solve these issues, Technicians list is also editable.
 
 <p align="center">
   <img src="./public/ITLog1.jpg" width="49%" />
@@ -17,7 +17,7 @@ React app to track IT department tasks and issues. Uses JSON-Server as a mock ba
 Live demo of the app is hosted on Netlify.  
 Visit [https://xander-itlogger.netlify.app/](https://xander-itlogger.netlify.app/)
 
-_\*The demo application uses a static JSON file, so after reloading the application, any changes in the database are not saved_
+_\*The demo application uses a static JSON file, so after reloading the application, any changes in the database are not persisted_
 
 ## Technology stack
 
